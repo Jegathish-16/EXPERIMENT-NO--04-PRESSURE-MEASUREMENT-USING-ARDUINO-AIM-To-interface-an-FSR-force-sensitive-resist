@@ -54,7 +54,7 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 
-![image](https://user-images.githubusercontent.com/36288975/163532979-a2a5cb5c-f495-442c-843e-bebb82737a35.png)
+![image](s1.png)
 
 
 
@@ -76,26 +76,33 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ *your roll no : 212221230041
+ * your name   : Jegathish S
+ * department and year : AIDS & 2nd year
+ ```
+ // C++ code
 
-![image](https://user-images.githubusercontent.com/36288975/188804653-a3154e8e-2655-46f2-9dcd-f425dd1ba109.png)
+int sensorvalue = A0;
+int ton;
+void setup()
+{
+  sensorvalue=0;
+  Serial.begin(9600);
+}
+void loop()
+{
+  sensorvalue = analogRead(A0);
+  ton = map(sensorvalue,0,466,0,10);
+  Serial.print("Raw Value: ");
+  Serial.println(sensorvalue);
+  Serial.print("Force: ");
+  Serial.println(ton);
+  delay(500);
+
+}
+ ```
+ ![image](s2.png)
+![image](s3.png)
 
 
 ### TABLE -02 standard deviation table 
